@@ -67,3 +67,7 @@ end
 
 # Rails.application.config.middleware.use 'Apartment::Elevators::Domain'
 Rails.application.config.middleware.use 'Apartment::Elevators::Subdomain'
+
+# Exclude the www subdomain (redirected at the DNS provider in production)
+Apartment::Elevators::Subdomain.excluded_subdomains = ['www']
+
